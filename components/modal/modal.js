@@ -115,7 +115,8 @@ export class TodoModal extends HTMLElement {
         delete state.modals.list[id];
         state.modals.show = false;
         state.modals.currentModal = '';
-        this.remove();
+        this.innerHTML = ' ';
+        $('#'+id).remove();
         document.dispatchEvent( state.events.modalsUpdate );
     }
 
