@@ -63,7 +63,8 @@ function isSelect( currentStatus = '', status ) {
 export function submitModalTask( id = null, elem ) {
     let data = {};
     let valid = true;
-    $a('.todo_input').forEach( function ( input ) {
+    let modal = elem.closest('todo-modal');
+    modal.querySelectorAll('.todo_input').forEach( function ( input ) {
         data[input.name] = input.value;
         if ( input.classList.contains('error') ) {
             valid = false;
@@ -77,7 +78,7 @@ export function submitModalTask( id = null, elem ) {
             result = state.actions.updateTask( id, data );
         }
         if ( result ) {
-            elem.closest('todo-modal').close();
+            modal.close();
         }
     }
 }
