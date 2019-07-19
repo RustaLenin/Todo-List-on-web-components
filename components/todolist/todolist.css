@@ -1,0 +1,155 @@
+todo-list {
+    display: flex;
+    flex-direction: column;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+todo-list .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 8px 60px;
+    background-color: var( --content_background );
+    box-shadow: var( --block_shadow );
+    transition: 0.4s;
+    margin-bottom: 24px;
+    border-radius: 6px;
+}
+
+todo-list .header .title {
+    font-size: 22px;
+    font-weight: bold;
+    color: var( --font_color_title );
+}
+
+todo-list .header .add_task {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var( --important_background );
+    border-radius: 50%;
+    padding: 8px;
+    transition: 0.4s;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+todo-list .header .add_task svg {
+    width: 24px;
+    height: 24px;
+    fill: var( --icon_fill_accent );
+    transition: 0.4s;
+    opacity: 0.8;
+}
+
+todo-list .header .add_task:hover {
+    opacity: 1;
+}
+
+todo-list .header .add_task:hover svg {
+    opacity: 1;
+}
+
+todo-list .list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 24px;
+}
+
+todo-list .list .null_task {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 300px;
+    background: var(--content_background);
+    padding: 16px;
+    box-shadow: var(--block_shadow);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+todo-list .list .null_task .null_icon {
+
+}
+
+todo-list .list .null_task .null_icon svg {
+    width: 72px;
+    height: 72px;
+    fill: var( --icon_fill_regular );
+    transition: 0.4s;
+    opacity: 0.8;
+}
+
+todo-list .list .null_task .null_title {
+    font-size: 22px;
+    font-weight: bold;
+    color: var( --font_color_title );
+    text-align: center;
+}
+
+todo-list .list .null_task:hover .null_icon svg {
+    opacity: 1;
+    fill: var( --icon_fill_bold );
+}
+
+todo-task {
+    display: flex;
+    flex-direction: column;
+    background-color: var( --content_background );
+    box-shadow: var( --block_shadow );
+    padding: 8px 16px;
+    border-radius: 6px;
+}
+
+todo-task .task_title {
+    padding: 4px 0;
+    font-size: 20px;
+    color: var( --font_color_title );
+    border-bottom: 1px solid var( --divider_color );
+}
+
+todo-task .task_description {
+    padding: 8px 0;
+    font-size: 16px;
+    color: var( --font_color_regular );
+    border-bottom: 1px solid var( --divider_color );
+    min-height: 160px;
+}
+
+todo-task .task_footer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 8px;
+}
+
+todo-task .task_status {
+    font-size: 16px;
+    color: var( --font_color_regular );
+}
+
+todo-task .task_controls {
+    display: flex;
+}
+
+todo-task .task_controls span {
+    cursor: pointer;
+}
+
+todo-task .task_controls span svg {
+    width: 24px;
+    height: 24px;
+    fill: var( --icon_fill_regular );
+    transition: 0.4s;
+    opacity: 0.8;
+    margin-right: 8px;
+}
+
+todo-task .task_controls span:hover svg {
+    width: 24px;
+    height: 24px;
+    fill: var( --icon_fill_bold );
+    opacity: 1;
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>ToDo List</title>
+    <link rel="shortcut icon" href="assets/img/favicon.png"/>
+    <script type="module" src="index.js"></script>
+    <script type="module" src="/state/state.js"></script>
+    <script type="module" src="/translate/translate.js"></script>
+    <script type="module" src="/components/components.js"></script>
+    <script type="module" src="/app/app.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <todo-header></todo-header>
+    <todo-app listen="change_locale"></todo-app>
+
+    <script type="module" src="/actions/actions.js"></script>
+</body>
+</html>

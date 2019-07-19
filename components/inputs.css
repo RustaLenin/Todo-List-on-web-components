@@ -1,0 +1,71 @@
+.todo_field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.todo_field:last-of-type {
+    margin-bottom: 0;
+}
+
+.todo_field .label {
+    padding-left: 8px;
+    font-size: 14px;
+    color: var( --font_color_regular );
+}
+
+.todo_field .comment {
+    height: 18px;
+    font-size: 14px;
+    padding-left: 8px;
+    color: var( --font_color_regular );
+}
+
+.todo_input {
+    font-size: 16px;
+    color: var( --font_color_regular );
+    transition: 0.4s;
+    opacity: 0.8;
+    border: 1px solid var( --input_color_regular );
+    box-shadow: none;
+    padding: 4px 8px;
+    background: transparent;
+    border-radius: 6px;
+}
+
+input.todo_input,
+select.todo_input {
+    min-height: 40px;
+    min-width: 240px;
+}
+
+textarea.todo_input {
+    min-height: 120px;
+    min-width: 240px;
+}
+
+select.todo_input * {
+    color: var( --font_color_select_options );
+}
+
+.todo_input::placeholder {
+    font-size: 16px;
+    color: var( --font_color_placeholder );
+}
+
+.todo_input:focus {
+    opacity: 1;
+    border-color: var( --input_color_focus );
+    box-shadow: 0 0 6px var( --input_color_focus );
+    outline: none;
+}
+
+.todo_input.success {
+    border-color: var( --input_color_success );
+    box-shadow: 0 0 6px var( --input_color_success );
+}
+
+.todo_input.error {
+    border-color: var( --input_color_error );
+    box-shadow: 0 0 6px var( --input_color_error );
+}

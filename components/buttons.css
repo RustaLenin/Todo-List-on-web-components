@@ -1,0 +1,16 @@
+.todo_submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 24px;
+    color: var( --font_color_accent );
+    background-color: var( --button_background_submit );
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.4s;
+}
+
+.todo_submit:hover {
+    opacity: 1;
+}

@@ -1,0 +1,190 @@
+todo-modal_area {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    background-color: #000000aa;
+    z-index: 10;
+    transition: 0.4s;
+}
+
+todo-modal_area.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+todo-modal {
+    display: none;
+    position: relative;
+    min-width: 460px;
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+
+todo-modal.show {
+    display: flex;
+    flex-direction: column;
+}
+
+todo-modal .header {
+    position: relative;
+    height: 68px;
+    background-color: var( --content_background );
+    border-bottom: 1px solid var( --divider_color );
+    font-weight: 600;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+todo-modal .header .title {
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    color: var( --font_color_regular );
+    margin-right: 16px;
+}
+
+todo-modal  .header .control {
+    display: flex;
+    align-items: center;
+}
+
+todo-modal  .header .control span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 8px;
+    padding: 8px;
+    border: 1px solid var( --divider_color );
+    border-radius: 50%;
+}
+
+todo-modal  .header .control span:last-of-type {
+    margin-right: 0;
+}
+
+todo-modal  .header .control span svg {
+    width: 16px;
+    height: 16px;
+    transition: 0.4s;
+    opacity: 0.8;
+    fill: var( --icon_fill_regular );
+}
+
+todo-modal  .header .control span:hover svg {
+    opacity: 1;
+}
+
+todo-modal  .header .control .collapse_modal:hover svg {
+    fill: var( --icon_fill_bold );
+}
+
+todo-modal  .header .control .close_modal:hover svg {
+    fill: var( --icon_fill_remove );
+}
+
+todo-modal .body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 16px 25px 16px;
+    overflow-y: auto;
+    min-height: 30vh;
+    min-width: 33vw;
+    max-width: 80vw;
+    max-height: 50vh;
+    border-bottom: 1px solid var( --divider_color );
+    background-color: var( --content_background );
+}
+
+todo-modal .footer {
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+    padding: 15px 25px;
+    background-color: var( --content_background );
+    flex-shrink: 0;
+}
+
+/** Modal List **/
+
+todo-modal_list {
+    height: auto;
+    position: fixed;
+    z-index: 9999;
+    right: 16px;
+    min-width: 240px;
+    bottom: 16px;
+    background-color: var( --content_background );
+}
+
+todo-modal_list .collapsed_modal {
+    padding: 8px 12px;
+    border-bottom: 1px solid var( --divider_color );
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+todo-modal_list .collapsed_modal.current {
+    border-left: 3px solid var( --border_accent_color );
+}
+
+todo-modal_list .collapsed_modal:last-of-type {
+    border-bottom: none;
+}
+
+todo-modal_list .collapsed_modal .title {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: var( --font_color_regular );
+    margin-right: 16px;
+}
+todo-modal_list .collapsed_modal.current .title {
+    color: var( --font_color_title );
+}
+
+
+todo-modal_list .collapsed_modal .controls {
+    display: flex;
+    align-items: center;
+}
+
+todo-modal_list .collapsed_modal .controls span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+todo-modal_list .collapsed_modal .controls span svg {
+    width: 24px;
+    height: 24px;
+    fill: var( --icon_fill_regular );
+    transition: 0.4s;
+    opacity: 0.8;
+    margin-right: 8px;
+}
+
+todo-modal_list .collapsed_modal .controls span:hover svg {
+    opacity: 1;
+    fill: var( --icon_fill_bold );
+}

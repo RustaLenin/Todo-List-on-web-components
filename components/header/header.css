@@ -1,0 +1,94 @@
+todo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 24px auto;
+    padding: 0 60px;
+    position: sticky;
+    top: 0;
+    height: 80px;
+    transition: 0.4s;
+    background: var( --content_background );
+    box-shadow: var( --block_shadow );
+    border-radius: 6px;
+    max-width: 960px;
+}
+
+todo-header .logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: var( --font_color_title );
+}
+
+todo-header .controls {
+    display: flex;
+}
+
+todo-header .switch_locale {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px;
+}
+
+todo-header .switch_locale .text {
+    font-weight: normal;
+    color: var( --font_color_regular );
+    transition: 0.4s;
+}
+
+todo-header .switch_locale .switcher {
+    background: var( --sub_background );
+    border-radius: 30px;
+    height: 30px;
+    width: 50px;
+    position: relative;
+    cursor: pointer;
+    margin: 0 8px;
+}
+
+todo-header .switch_locale .switcher:before {
+    content: ' ';
+    display: block;
+    height: 22px;
+    width: 22px;
+    position: absolute;
+    bottom: 4px;
+    left: 4px;
+    transition: 0.4s;
+    background-color: var( --accent_background );
+    border-radius: 50%;
+}
+
+todo-header .switch_locale.en .switcher:before {
+    transform: translateX(0);
+}
+
+todo-header .switch_locale.ru .switcher:before {
+    transform: translateX(20px);
+}
+
+todo-header .switch_locale.en .text.en,
+todo-header .switch_locale.ru .text.ru {
+    font-weight: bold;
+    color: var( --font_color_title );
+}
+
+todo-header .controls .switch_light {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+todo-header .controls .switch_light svg {
+    width: 30px;
+    height: 30px;
+    fill: var( --icon_switch_theme );
+    transition: 0.4s;
+    opacity: 0.8;
+}
+
+todo-header .controls .switch_light:hover svg {
+    opacity: 1;
+}

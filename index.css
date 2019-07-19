@@ -1,0 +1,13 @@
+@import "components/components.css";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var( --body_background );
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
