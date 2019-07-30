@@ -138,16 +138,17 @@ todo-task .task_controls span {
     cursor: pointer;
 }
 
-todo-task .task_controls span svg {
+todo-task .task_controls todo-svg svg {
     width: 24px;
     height: 24px;
     fill: var( --icon_fill_regular );
     transition: 0.4s;
     opacity: 0.8;
     margin-right: 8px;
+    cursor: pointer;
 }
 
-todo-task .task_controls span:hover svg {
+todo-task .task_controls todo-svg:hover svg {
     width: 24px;
     height: 24px;
     fill: var( --icon_fill_bold );

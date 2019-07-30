@@ -1,0 +1,14 @@
+todo-svg {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+todo-svg svg {
+    transition: 0.4s;
+    opacity: 0.8;
+}
+
+todo-svg:hover svg {
+    opacity: 1;
+}

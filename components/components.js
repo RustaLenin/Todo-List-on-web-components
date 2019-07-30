@@ -1,3 +1,4 @@
+import { TodoSvg } from './svg/svg.js';
 import { TodoHeader } from './header/header.js'
 import { TodoList } from './todolist/todolist.js'
 import { TodoModalArea, collapseAllModals } from './modal/area.js'
@@ -5,6 +6,7 @@ import { TodoModal, newModal } from './modal/modal.js'
 import { TodoModalList } from './modal/list.js';
 import { TodoTask } from './todolist/task.js';
 
+customElements.define('todo-svg', TodoSvg );
 customElements.define('todo-header', TodoHeader );
 customElements.define('todo-list', TodoList );
 customElements.define('todo-modal_area', TodoModalArea );

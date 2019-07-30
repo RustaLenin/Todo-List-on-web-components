@@ -63,7 +63,7 @@ todo-modal  .header .control {
     align-items: center;
 }
 
-todo-modal  .header .control span {
+todo-modal  .header .control todo-svg {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -74,11 +74,11 @@ todo-modal  .header .control span {
     border-radius: 50%;
 }
 
-todo-modal  .header .control span:last-of-type {
+todo-modal  .header .control todo-svg:last-of-type {
     margin-right: 0;
 }
 
-todo-modal  .header .control span svg {
+todo-modal  .header .control todo-svg svg {
     width: 16px;
     height: 16px;
     transition: 0.4s;
@@ -86,7 +86,7 @@ todo-modal  .header .control span svg {
     fill: var( --icon_fill_regular );
 }
 
-todo-modal  .header .control span:hover svg {
+todo-modal  .header .control todo-svg:hover svg {
     opacity: 1;
 }
 
@@ -168,14 +168,14 @@ todo-modal_list .collapsed_modal .controls {
     align-items: center;
 }
 
-todo-modal_list .collapsed_modal .controls span {
+todo-modal_list .collapsed_modal .controls todo-svg {
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
 }
 
-todo-modal_list .collapsed_modal .controls span svg {
+todo-modal_list .collapsed_modal .controls todo-svg svg {
     width: 24px;
     height: 24px;
     fill: var( --icon_fill_regular );
@@ -184,7 +184,7 @@ todo-modal_list .collapsed_modal .controls span svg {
     margin-right: 8px;
 }
 
-todo-modal_list .collapsed_modal .controls span:hover svg {
+todo-modal_list .collapsed_modal .controls todo-svg:hover svg {
     opacity: 1;
     fill: var( --icon_fill_bold );
 }
